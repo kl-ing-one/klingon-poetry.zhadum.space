@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="klingon">
+<head>
+    <title>Klingon poetry generator. Poem no.: {{@id_poem}}</title>
+    <meta charset="utf-8">
+    <meta property="og:site_name" content="Klingon poetry generator">
+    <meta property="og:title" content="Poem no.: {{@id_poem}}">
+    <meta property="og:url" content="http://klingon-poetry.zhadum.space/poem/{{@id_poem}}">
+    <meta property="og:image" content="http://klingon-poetry.zhadum.space/images/{{@id_poem}}.png">
+    <style>
+        body {
+            background-color: #000;
+            color: #0c0;
+            font-family: "Courier New", Courier, monospace
+        }
+
+        .klingon_poem {
+            width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="klingon_poem">{{@poem | raw}}</div>
+<include href="ga.js"/>
+</body>
+</html>
